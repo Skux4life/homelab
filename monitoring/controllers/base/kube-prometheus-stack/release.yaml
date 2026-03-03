@@ -31,3 +31,9 @@ spec:
   values:
     grafana:
       adminPassword: matthew
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana.mattellis.foo
+        path: /
