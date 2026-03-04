@@ -37,3 +37,7 @@ spec:
         hosts:
           - grafana.mattellis.foo
         path: /
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grafana.mattellis.foo
