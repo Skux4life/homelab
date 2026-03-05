@@ -17,11 +17,31 @@ spec:
       #  runAsUser: 1000 # node user ID
       #  runAsGroup: 1000 # node group ID
 
+      initContainers:
+        - name: permissions-fix
+          image: busybox
+          command: ["sh", "-c", "chown -R 1000:1000 /audiobooks /podcasts /config /metadata"]
+          volumeMounts:
+            - mountPath: "/audiobooks"
+              name: audiobooks-data
+
+            - mountPath: "/podcasts"
+              name: podcasts-data
+
+            - mountPath: "/config"
+              name: config-data
+
+            - mountPath: "/metadata"
+              name: metadata-data
+
       containers:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:2.32.0
-          #securityContext:
-          #  allowPrivilegeEscalation: false
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 1000
+            runAsGroup: 1000
+            fsGroup: 1000
           envFrom:
             - configMapRef:
                 name: audiobookshelf-configmap
