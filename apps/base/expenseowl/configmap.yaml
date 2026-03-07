@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: expenseowl-config
+data:
+  EXPENSE_CATEGORIES: "Food,Groceries,Travel,Rent,Utilities,Money Transfer,Entertainment,Healthcare,Shopping,Other"
+  CURRENCY: aud

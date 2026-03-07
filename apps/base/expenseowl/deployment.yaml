@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: expenseowl
+spec:
+  selector:
+    matchLabels:
+      app: expenseowl
+  replicas: 1 
+  template:
+    metadata:
+      labels:
+        app: expenseowl
+    spec:
+      containers:
+      - name: expenseowl
+        image: tanq16/expenseowl:main
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: expenseowl-config
