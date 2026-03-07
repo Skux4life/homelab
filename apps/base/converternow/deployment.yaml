@@ -21,6 +21,4 @@ spec:
         - name: converternow
           image: ghcr.io/ferraridamiano/converternow:v4.6.0
           ports:
-            - containerPort: 8080
-
-
+            - containerPort: 80
