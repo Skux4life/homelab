@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aliasvault
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aliasvault
+  template:
+    metadata:
+      labels:
+        app: aliasvault
+    spec:
+
+      containers:
+        - name: aliasvault
+          image: ghcr.io/aliasvault/aliasvault:0.27.2
+          envFrom:
+            - configMapRef:
+                name: aliasvault-config
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+            - containerPort: 25
+            - containerPort: 587

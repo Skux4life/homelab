@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aliasvault-config
+data:
+  HOSTNAME: "localhost"
+  PUBLIC_REGISTRATION_ENABLED: "true"
+  IP_LOGGING_ENABLED: "true"
+  FORCE_HTTPS_REDIRECT: "false"
+  SUPPORT_EMAIL: ""
+  PRIVATE_EMAIL_DOMAINS: ""
+  SMTP_TLS_ENABLED: "false"
