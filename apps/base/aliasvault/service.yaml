@@ -6,11 +6,15 @@ spec:
   selector:
     app: aliasvault
   ports:
-  - port: 25
+  - name: email
+    port: 25
     targetPort: 25
-  - port: 587
+  - name: encrypted-email
+    port: 587
     targetPort: 587
-  - port: 80
+  - name: http
+    port: 80
     targetPort: 80
-  - port: 443
+  - name: https
+    port: 443
     targetPort: 443
