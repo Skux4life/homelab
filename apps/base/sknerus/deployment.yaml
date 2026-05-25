@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sknerus
+spec:
+  selector:
+    matchLabels:
+      app: sknerus
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: sknerus
+    spec:
+      containers:
+      - name: sknerus
+        image: ghcr.io/pnowy/sknerus:latest
+        ports:
+        - containerPort: 8080
