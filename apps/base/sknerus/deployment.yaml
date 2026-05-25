@@ -16,4 +16,4 @@ spec:
       - name: sknerus
         image: ghcr.io/pnowy/sknerus:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
