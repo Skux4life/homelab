@@ -21,6 +21,8 @@ spec:
       type: "PAPER"
       memory: 2048M
       # serviceType: ClusterIP
+      serviceType: NodePort
+      nodePort: 30565
       mode: creative
 
       whitelist: "tinyminey"
@@ -32,7 +34,3 @@ spec:
         storageClass: "local-path"
         accessMode: ReadWriteOnce
         size: 10Gi
-    service:
-      type: NodePort
-      port: 25565
-      nodePort: 30565
