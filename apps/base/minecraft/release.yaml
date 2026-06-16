@@ -11,7 +11,7 @@ spec:
       version: "*"
       sourceRef:
         kind:  HelmRepository
-        name: itzg
+        name: minecraft-stack
         namespace: minecraft
       interval: 12h
 
