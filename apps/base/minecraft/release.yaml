@@ -20,7 +20,7 @@ spec:
       eula: "TRUE"
       type: "PAPER"
       memory: 2048M
-      serviceType: ClusterIP
+      # serviceType: ClusterIP
       mode: creative
 
       whitelist: "tinyminey"
