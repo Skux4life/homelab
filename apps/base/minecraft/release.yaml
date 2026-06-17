@@ -23,7 +23,7 @@ spec:
       # serviceType: ClusterIP
       serviceType: NodePort
       nodePort: 30565
-      mode: creative
+      gameMode: creative
 
       whitelist: "tinyminey"
       ops: "tinyminey"
