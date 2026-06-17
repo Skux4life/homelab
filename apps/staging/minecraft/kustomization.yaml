@@ -3,5 +3,4 @@ kind: Kustomization
 namespace: minecraft
 resources:
   - ../../base/minecraft
-  #- cloudflare.yaml
-  #- cloudflare-secret.yaml
+  - playit-secret.yaml

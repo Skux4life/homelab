@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playit-agent
+  labels:
+    app: playit-agent
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: playit-agent
+  template:
+    metadata:
+      labels:
+        app: playit-agent
+    spec:
+      containers:
+        - name: playit
+          image: ghcr.io/playit-cloud/playit-agent:0.16
+          envFrom:
+            - secretRef:
+                name: playit-agent-secret
+          resources:
+            requests:
+              cpu: 10m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
