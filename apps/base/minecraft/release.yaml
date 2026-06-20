@@ -25,7 +25,7 @@ spec:
       nodePort: 30565
       gameMode: creative
 
-      whitelist: ["tinyminey", "syntax_error9908"]
+      whitelist: "tinyminey,syntax_error9908"
       ops: "tinyminey"
 
     persistence:
