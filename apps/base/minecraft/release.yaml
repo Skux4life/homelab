@@ -26,7 +26,7 @@ spec:
       gameMode: creative
 
       whitelist: "tinyminey,syntax_error9908"
-      ops: "tinyminey"
+      ops: "tinyminey,syntax_error9908"
 
     persistence:
       dataDir:
