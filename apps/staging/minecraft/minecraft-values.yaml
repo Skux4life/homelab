@@ -1,0 +1,22 @@
+apiVersion: v1
+data:
+    ops: ENC[AES256_GCM,data:LlHh1Tom+g7ZvhjiUrnA56ZmDIkVfSg2LjVIuMMJtF8KcOyQ,iv:n2oiULXiPSXV2uu5AfdwQ2ljNZdglUimtY5ANaQmj58=,tag:ruKl8VihPHeiyKbgDFe9Lg==,type:str]
+    whitelist: ENC[AES256_GCM,data:QGqbrB+ZD+9+3iKusAud2KKJvsy96dtakewdkdbt/6XJp9Qv,iv:kAFWr2/hoDkMO3XDcRUk/O/vflqxX6GkJ/cTrVvMl2M=,tag:ACyygo51F5J3FE8i5yJ18w==,type:str]
+kind: Secret
+metadata:
+    name: minecraft-values
+sops:
+    age:
+        - enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSclJYZlk3MEprYVFQd0w3
+            a1VGT0NlTEFMS2EycFp6QmlDT2RSYlpvdndFCkRzdGZBek45akNlREt2N0JCYmFo
+            N1dBTWRGdExRYTZQZExOUFVXYkt5VEEKLS0tIGxxcktXMU8vM1RXOW16VkZTbmMy
+            eG03L3J5dU5Pei85RXN0cWNzWnQ1dlUKPY4laXekoRFpUfxox89WNQa2qhcpV5Ok
+            5xlFYaCWcw6yb+avpDLVcR+uV1chWsHqDHCm/P0HjELXhKugd1l8mA==
+            -----END AGE ENCRYPTED FILE-----
+          recipient: age1jum4a6862hc9h6s3gwst2s8mctgjqs4ff6df0zhdwj2g8nam3sfsennvse
+    encrypted_regex: ^(data|stringData)$
+    lastmodified: "2026-07-09T10:02:55Z"
+    mac: ENC[AES256_GCM,data:9fRfWSr60rSU/bIO0w7jf6mYJW59uo05OiGXtaRkAPUxtk9nUOO/6sE5yQzEADsu4ofkPqGIYsroF2GftBL6E0r2kfO+8PK6BW08NIPWmXSdgDs5Lg4XcPoaXNz3015tvZma0unaC2s96ZT8wu6OHiTUBTyrQiER+fZAkT6khnc=,iv:HzKskdpgffuBgyLIzeuLrQ9I27p82L2jX9Ix7VphYyg=,tag:UyQony0V5azd+EHlMPKN2w==,type:str]
+    version: 3.13.1

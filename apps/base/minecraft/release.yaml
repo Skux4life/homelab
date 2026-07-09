@@ -15,6 +15,16 @@ spec:
         namespace: minecraft
       interval: 12h
 
+  valuesFrom:
+    - kind: Secret
+      name: minecraft-values
+      valuesKey: whitelist
+      targetPath: minecraftServer.whitelist
+    - kind: Secret
+      name: minecraft-values
+      valuesKey: ops
+      targetPath: minecraftServer.ops
+
   values:
     minecraftServer:
       eula: "TRUE"
@@ -24,9 +34,6 @@ spec:
       serviceType: NodePort
       nodePort: 30565
       gameMode: creative
-
-      whitelist: "tinyminey,syntax_error9908"
-      ops: "tinyminey,syntax_error9908"
 
     persistence:
       dataDir:

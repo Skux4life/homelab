@@ -5,3 +5,4 @@ resources:
   - ../../base/minecraft
   - playit-secret.yaml
   - playit.yaml
+  - minecraft-values.yaml
