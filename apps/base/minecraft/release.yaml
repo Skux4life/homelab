@@ -33,7 +33,8 @@ spec:
       # serviceType: ClusterIP
       serviceType: NodePort
       nodePort: 30565
-      gameMode: creative
+      gameMode: survival
+      difficulty: peaceful
 
     persistence:
       dataDir:
