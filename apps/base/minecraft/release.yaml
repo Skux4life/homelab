@@ -26,17 +26,38 @@ spec:
       targetPath: minecraftServer.ops
 
   values:
-    replicaCount: 0
+    replicaCount: 1
     minecraftServer:
       eula: "TRUE"
-      type: "FORGE"
+      type: "NEOFORGE"
       version: "1.21.1"
-      memory: 6G
+      memory: 8G
       # serviceType: ClusterIP
       serviceType: NodePort
       nodePort: 30565
-      gameMode: survival
+      gameMode: creative
       difficulty: peaceful
+
+      modrinth:
+        projects:
+          - "create"
+          - "create-connected"
+          - "sable"
+          - "create-aeronautics"
+          - "ferrite-core"
+
+        downloadMode: "required"
+
+      # Required JVM optimizations for NeoForge + heavy physics mods
+      jvmOpts: "-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200"
+
+      resources:
+        requests:
+          cpu: "2000m"
+          memory: "8Gi"
+        limits:
+          cpu: "6000m"
+          memory: "10Gi"
 
     persistence:
       dataDir:
