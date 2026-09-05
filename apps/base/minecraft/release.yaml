@@ -10,7 +10,7 @@ spec:
       chart: minecraft
       version: "*"
       sourceRef:
-        kind:  HelmRepository
+        kind: HelmRepository
         name: minecraft-stack
         namespace: minecraft
       interval: 12h
@@ -26,10 +26,12 @@ spec:
       targetPath: minecraftServer.ops
 
   values:
+    replicaCount: 0
     minecraftServer:
       eula: "TRUE"
-      type: "PAPER"
-      memory: 2048M
+      type: "FORGE"
+      version: "1.21.1"
+      memory: 6G
       # serviceType: ClusterIP
       serviceType: NodePort
       nodePort: 30565
