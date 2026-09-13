@@ -51,7 +51,7 @@ spec:
     extraEnv:
       # MOD_PLATFORM: "MODRINTH"
       MODRINTH_LOADER: "neoforge"
-      MODRINTH_MODPACK: "create_plus" # Use the modpack slug/ID from Modrinth
+      MODRINTH_MODPACK: "https://modrinth.com/modpack/create_plus/version/6.0.0-alpha-f"
       MODRINTH_FORCE_SYNCHRONIZE: "true"
 
     persistence:
