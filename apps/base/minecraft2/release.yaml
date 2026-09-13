@@ -1,0 +1,62 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: minecraft2-stack
+  namespace: minecraft
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: minecraft
+      version: "*"
+      sourceRef:
+        kind: HelmRepository
+        name: minecraft-stack
+        namespace: minecraft
+      interval: 12h
+
+  valuesFrom:
+    - kind: Secret
+      name: minecraft-values
+      valuesKey: whitelist
+      targetPath: minecraftServer.whitelist
+    - kind: Secret
+      name: minecraft-values
+      valuesKey: ops
+      targetPath: minecraftServer.ops
+
+  values:
+    replicaCount: 1
+    minecraftServer:
+      eula: "TRUE"
+      type: "MODRINTH"
+      version: "1.21.1"
+      memory: "8G"
+      # serviceType: ClusterIP
+      serviceType: NodePort
+      nodePort: 30565
+      gameMode: survival
+      difficulty: peaceful
+
+      modrinth:
+        modpack: "create-plus"
+
+        downloadMode: "required"
+
+      # Required JVM optimizations for NeoForge + heavy physics mods
+      jvmOpts: "-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200"
+
+      resources:
+        requests:
+          cpu: "2000m"
+          memory: "8Gi"
+        limits:
+          cpu: "6000m"
+          memory: "10Gi"
+
+    persistence:
+      dataDir:
+        enabled: true
+        storageClass: "local-path"
+        accessMode: ReadWriteOnce
+        size: 10Gi
