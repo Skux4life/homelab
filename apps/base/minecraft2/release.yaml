@@ -39,8 +39,7 @@ spec:
       difficulty: peaceful
 
       modrinth:
-        projects:
-          - "create_plus"
+        modpack: "create_plus"
         downloadMode: "required"
 
       # Required JVM optimizations for NeoForge + heavy physics mods
