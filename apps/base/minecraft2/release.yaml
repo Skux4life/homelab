@@ -29,7 +29,7 @@ spec:
     replicaCount: 1
     minecraftServer:
       eula: "TRUE"
-      type: "MODRINTH"
+      type: "NEOFORGE"
       version: "1.21.1"
       memory: "8G"
       # serviceType: ClusterIP
@@ -39,8 +39,8 @@ spec:
       difficulty: peaceful
 
       modrinth:
-        modpack:
-          project: "create_plus"
+        projects:
+          - "create_plus"
         downloadMode: "required"
 
       # Required JVM optimizations for NeoForge + heavy physics mods
