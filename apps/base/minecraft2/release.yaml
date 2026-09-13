@@ -34,7 +34,7 @@ spec:
       memory: "8G"
       # serviceType: ClusterIP
       serviceType: NodePort
-      nodePort: 30565
+      nodePort: 30555
       gameMode: survival
       difficulty: peaceful
 
