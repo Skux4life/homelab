@@ -38,10 +38,9 @@ spec:
       gameMode: survival
       difficulty: peaceful
 
-      modrinth:
-        modpack: "create-plus"
-
-        downloadMode: "required"
+      # modrinth:
+      #   modpack: "create-plus"
+      #   downloadMode: "required"
 
       # Required JVM optimizations for NeoForge + heavy physics mods
       jvmOpts: "-XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200"
@@ -53,6 +52,9 @@ spec:
         limits:
           cpu: "6000m"
           memory: "10Gi"
+
+      extraEnv:
+        MODRINTH_MODPACK: "create_plus"
 
     persistence:
       dataDir:
