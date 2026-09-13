@@ -29,7 +29,7 @@ spec:
     replicaCount: 1
     minecraftServer:
       eula: "TRUE"
-      type: "NEOFORGE"
+      type: "MODRINTH"
       version: "1.21.1"
       memory: "8G"
       # serviceType: ClusterIP
@@ -49,7 +49,8 @@ spec:
           cpu: "6000m"
           memory: "10Gi"
       extraEnv:
-        MOD_PLATFORM: "MODRINTH"
+        # MOD_PLATFORM: "MODRINTH"
+        MODRINTH_LOADER: "neoforge"
         MODRINTH_MODPACK: "create_plus" # Use the modpack slug/ID from Modrinth
         MODRINTH_FORCE_SYNCHRONIZE: "true"
 
