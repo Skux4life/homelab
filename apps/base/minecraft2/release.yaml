@@ -48,11 +48,11 @@ spec:
         limits:
           cpu: "6000m"
           memory: "10Gi"
-      extraEnv:
-        # MOD_PLATFORM: "MODRINTH"
-        MODRINTH_LOADER: "neoforge"
-        MODRINTH_MODPACK: "create_plus" # Use the modpack slug/ID from Modrinth
-        MODRINTH_FORCE_SYNCHRONIZE: "true"
+    extraEnv:
+      # MOD_PLATFORM: "MODRINTH"
+      MODRINTH_LOADER: "neoforge"
+      MODRINTH_MODPACK: "create_plus" # Use the modpack slug/ID from Modrinth
+      MODRINTH_FORCE_SYNCHRONIZE: "true"
 
     persistence:
       dataDir:
