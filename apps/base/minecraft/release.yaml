@@ -31,7 +31,7 @@ spec:
       eula: "TRUE"
       type: "NEOFORGE"
       version: "1.21.1"
-      memory: 8G
+      memory: 5G
       # serviceType: ClusterIP
       serviceType: NodePort
       nodePort: 30565
@@ -55,10 +55,10 @@ spec:
       resources:
         requests:
           cpu: "2000m"
-          memory: "8Gi"
+          memory: "6Gi"
         limits:
-          cpu: "6000m"
-          memory: "10Gi"
+          cpu: "4000m"
+          memory: "8Gi"
 
     persistence:
       dataDir:
