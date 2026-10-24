@@ -30,6 +30,7 @@ spec:
     minecraftServer:
       eula: "TRUE"
       type: "MODRINTH"
+      modloader: "neoforge"
       version: "1.21.1"
       memory: "8G"
       # serviceType: ClusterIP
