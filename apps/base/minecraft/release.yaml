@@ -30,7 +30,6 @@ spec:
     minecraftServer:
       eula: "TRUE"
       type: "MODRINTH"
-      modloader: "neoforge"
       version: "1.21.1"
       memory: "8G"
       # serviceType: ClusterIP
@@ -55,7 +54,7 @@ spec:
       MODRINTH_MODPACK: "https://modrinth.com/modpack/create_plus/version/6.0.0-alpha-f"
       MODRINTH_FORCE_SYNCHRONIZE: "true"
       MODRINTH_EXCLUDE_FILES: "statuseffectbars"
-      MODRINTH_PROJECTS: "create-easy-structures"
+      MODRINTH_PROJECTS: "neoforge:create-easy-structures"
 
     persistence:
       dataDir:

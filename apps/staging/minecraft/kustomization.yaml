@@ -4,3 +4,5 @@ namespace: minecraft
 resources:
   - ../../base/minecraft
   - minecraft-values.yaml
+  - playit.yaml
+  - playit-secret.yaml
